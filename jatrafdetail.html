@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="jatraf.css" />
-    <link rel="stylesheet" href="icofont.min.css" />
     <!-- Font Dancing Script -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
     <!-- Bootstrap -->
@@ -14,6 +13,55 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <style>
+
+
+
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+
+
+
+   }
+    </style>
     <title>Detail menu</title>
   </head>
   <body>
@@ -64,7 +112,7 @@
                 <!--  <small class="text-success">(diskon 36% dengan gopay)</small> -->
               </h2>
               <div class="form-group mb-2 w-25">
-                <label>Quantity</label>
+                <label>Jumlah</label>
                 <input type="quantiy" placeholder="jumlah item" class="form-control" />
               </div>
               <button class="btn btn-dark btn-rounded mr-1" data-toggle="tooltip" title="" data-original-title="Add to cart">
@@ -82,11 +130,104 @@
         </div>
       </div>
     </div>
+
+    <!-- multi carousel -->
+
+
+<div class="container text-center my-5  ">
+  <h4>Menu Lainnya</h4>
+  <!-- <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2> -->
+  <div class="row mx-auto my-auto justify-content-center">
+      <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/1 .png" class="img-fluid" >
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/2.png" class="img-fluid" >
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/3.png" class="img-fluid">
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/4.png" class="img-fluid"  >
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/5.png" class="img-fluid"  >
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-sm-3">
+                      <div class="card">
+                          <div class="card-img">
+                              <img src="assset/Untitled/66.png" class="img-fluid"  >
+                          </div>
+                          <div class="card-img-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+      </div>
+    </div>
+  <!-- </div>
+  <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+</div> -->
+</div>
+      <!-- </div>
+      <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+    </div> -->
+
+  <!-- </div>
+  <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+</div> -->
+
+
+
     <!-- <div class="container bootdey">
-  <div class="col-md-12">
+  <div class="col-md-42">
   <section class="panel">
         <div class="panel-body">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="pro-img-details">
                     <img src="https://via.placeholder.com/550x380/FFB6C1/000000" alt="">
                 </div>
@@ -138,5 +279,8 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="assset/js/skript.js"></script>
+    <script src="assset/js/jquery-3.6.0.min.js"></script>
   </body>
 </html>
